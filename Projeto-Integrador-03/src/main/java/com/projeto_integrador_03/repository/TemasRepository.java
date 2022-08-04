@@ -11,7 +11,7 @@ import com.projeto_integrador_03.model.Temas;
 @Repository
 public interface TemasRepository extends JpaRepository<Temas, Long> {
 
-	public List <Temas> findAllByTituloContainingIgnoreCase(@Param("titulo") String titulo);
+	public List <Temas> findAllByTituloContainingIgnoreCase(@Param("titulo	") String titulo);
 	
 	public List <Temas> findAllByDescricaoContainingIgnoreCase(@Param("descricao") String descricao);
 	
