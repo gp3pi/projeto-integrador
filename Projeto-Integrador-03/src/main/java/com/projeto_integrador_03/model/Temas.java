@@ -30,8 +30,8 @@ public class Temas {
 	@Size(min = 10, max = 1000, message = "O atributo descrição deve ter entre 10 e 1000 caracteres")
 	private String descricao;
 	
-	@OneToMany(mappedBy = "Temas", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties("Temas")
+	@OneToMany(mappedBy = "temas", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("temas")
 	private List <Postagens> postagens;
 	
 	
