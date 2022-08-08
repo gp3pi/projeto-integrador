@@ -23,6 +23,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.projeto_integrador_03.model.Postagens;
 //import com.projeto_integrador_03.model.Temas;
 import com.projeto_integrador_03.repository.PostagensRepository;
+import com.projeto_integrador_03.repository.TemasRepository;
 
 @RestController
 @RequestMapping("/postagens")
@@ -32,6 +33,9 @@ public class PostagensController {
 	
 	@Autowired
 	private PostagensRepository postagensRepository;
+	
+	@Autowired
+	private TemasRepository temasRepository;
 	
 	@GetMapping
 	public ResponseEntity<List<Postagens>> getAll(){
@@ -59,7 +63,7 @@ public class PostagensController {
 
 	@PostMapping
     public ResponseEntity<Postagens> post(@Valid @RequestBody Postagens postagens){
-        if(postagensRepository.existsById(postagens.getTemas().getId()))
+        if(temasRepository.existsById(postagens.getTemas().getId()))
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(postagensRepository.save(postagens));
 
@@ -67,9 +71,9 @@ public class PostagensController {
     }
     @PutMapping
     public ResponseEntity<Postagens> put(@Valid @RequestBody Postagens postagens){
-        if (postagensRepository.existsById(postagens.getId())){
+        if (temasRepository.existsById(postagens.getId())){
 
-            if (postagensRepository.existsById(postagens.getTemas().getId()))
+            if (temasRepository.existsById(postagens.getTemas().getId()))
                 return ResponseEntity.status(HttpStatus.OK)
                         .body(postagensRepository.save(postagens));
 
