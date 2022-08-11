@@ -71,7 +71,7 @@ public class PostagensController {
     }
     @PutMapping
     public ResponseEntity<Postagens> put(@Valid @RequestBody Postagens postagens){
-        if (temasRepository.existsById(postagens.getId())){
+        if (postagensRepository.existsById(postagens.getId())){
 
             if (temasRepository.existsById(postagens.getTemas().getId()))
                 return ResponseEntity.status(HttpStatus.OK)
