@@ -15,46 +15,32 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 @Entity
 @Table(name = "tb_postagens")
 public class Postagens {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message = "O atributo titulo é obrigatório.")
-	@Size(min = 5, max = 100, message = "O titulo deve ter entre 5 e 100 caracteres.")
+	@NotBlank(message = "Titulo é uma informação obrigatória.")
+	@Size(min = 3 , max = 255)
 	private String titulo;
 	
-	@NotBlank(message = "O atributo texto é obrigatório.")
-	@Size(min = 10, max = 1000, message = "O texto deve ter entre 10 e 1000 caracteres.")
+	@NotBlank (message = "Texto é uma informação obrigatória.")
+	@Size(min = 10, max =255)
 	private String texto;
-	
-	@Size(min = 1, max = 100, message = "A URL do atributo foto deve conter entre 1 e 100 caracteres." )
-	private String foto;
-	
 	
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("Postagens")
-	private Usuario usuario;
+	@JsonIgnoreProperties("postagens")
+	private Temas temas;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("Postagens")
-	private Temas temas;
-
-	
-
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
+	@JsonIgnoreProperties("postagens")
+	private Usuario usuario;
 
 	public Long getId() {
 		return id;
@@ -80,14 +66,6 @@ public class Postagens {
 		this.texto = texto;
 	}
 
-	public String getFoto() {
-		return foto;
-	}
-
-	public void setFoto(String foto) {
-		this.foto = foto;
-	}
-
 	public LocalDateTime getData() {
 		return data;
 	}
@@ -103,8 +81,14 @@ public class Postagens {
 	public void setTemas(Temas temas) {
 		this.temas = temas;
 	}
-	
-	
 
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 }
-
+	
+	

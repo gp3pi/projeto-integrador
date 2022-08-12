@@ -44,11 +44,6 @@ public class TemasController {
 				.map(resposta -> ResponseEntity.ok(resposta))
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
-
-	@GetMapping("/titulo/{titulo}")
-	public ResponseEntity<List<Temas>> getByTitulo(@PathVariable String titulo){
-		return ResponseEntity.ok(temasRepository.findAllByTituloContainingIgnoreCase(titulo));
-	}
 	
 	@GetMapping("/descricao/{descricao}")
 	public ResponseEntity<List<Temas>> getByDescricao(@PathVariable String descricao){

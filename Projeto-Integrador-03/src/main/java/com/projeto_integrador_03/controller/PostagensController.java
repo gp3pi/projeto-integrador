@@ -48,30 +48,24 @@ public class PostagensController {
 				.map(resposta -> ResponseEntity.ok(resposta))
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
-	
-	@GetMapping("/titulo/{titulo}")
-	public ResponseEntity<List<Postagens>> getByTitulo(@PathVariable String titulo){
-		return ResponseEntity.ok(postagensRepository.findAllByTituloContainingIgnoreCase(titulo));
-		
-	}
-	
-	@GetMapping("/texto/{texto}")
-	public ResponseEntity<List<Postagens>> getByTexto(@PathVariable String texto){
-		return ResponseEntity.ok(postagensRepository.findAllByTextoContainingIgnoreCase(texto));
-		
-	}
 
 	@PostMapping
-    public ResponseEntity<Postagens> post(@Valid @RequestBody Postagens postagens){
-        if(temasRepository.existsById(postagens.getTemas().getId()))
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body(postagensRepository.save(postagens));
+	public ResponseEntity<Postagens> postPostagem (@Valid @RequestBody Postagens postagens){
+		
+		/** Checa antes de Persistir o Objeto Postagem se o Tema existe 
+		 *  Se o Objeto Tema não existir, o status devolvido será Bad Request (400).
+		*/
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-    }
+		if (temasRepository.existsById(postagens.getTemas().getId()))
+			return ResponseEntity.status(HttpStatus.CREATED).body(postagensRepository.save(postagens));
+	
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+	
+	}
+
     @PutMapping
     public ResponseEntity<Postagens> put(@Valid @RequestBody Postagens postagens){
-        if (temasRepository.existsById(postagens.getId())){
+        if (postagensRepository.existsById(postagens.getId())){
 
             if (temasRepository.existsById(postagens.getTemas().getId()))
                 return ResponseEntity.status(HttpStatus.OK)
@@ -84,9 +78,10 @@ public class PostagensController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 	
+    
+    
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
-    
     public void delete (@PathVariable Long id) {
     	Optional<Postagens> postagens = postagensRepository.findById(id);
     	

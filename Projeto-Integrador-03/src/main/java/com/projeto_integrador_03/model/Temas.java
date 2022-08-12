@@ -27,21 +27,13 @@ public class Temas {
 	private String titulo;
 	
 	@NotBlank(message = "O atributo descrição é obrigatório.")
-	@Size(min = 10, max = 1000, message = "O atributo descrição deve ter entre 10 e 1000 caracteres")
+	@Size(min = 10, max = 255, message = "O atributo descrição deve ter entre 10 e 1000 caracteres")
 	private String descricao;
 	
 	@OneToMany(mappedBy = "temas", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("temas")
 	private List <Postagens> postagens;
 	
-	
-	public List<Postagens> getPostagens() {
-		return postagens;
-	}
-
-	public void setPostagens(List<Postagens> postagens) {
-		this.postagens = postagens;
-	}
 
 	public Long getId() {
 		return id;
@@ -67,6 +59,14 @@ public class Temas {
 		this.descricao = descricao;
 	}
 	
+	public List<Postagens> getPostagens() {
+		return postagens;
+	}
+
+	public void setPostagens(List<Postagens> postagens) {
+		this.postagens = postagens;
+	}
+
 	
 	
 }
