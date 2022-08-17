@@ -12,7 +12,7 @@
 	<artifactId>Projeto_Integrador_03</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Projeto_Integrador_03</name>
-	<description>Back-End de uma Loja de Games</description>
+	<description>Projeto Integrador do grupo 03</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -46,9 +46,18 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>

@@ -26,7 +26,7 @@ import com.projeto_integrador_03.repository.TemaRepository;
 
 
 @RestController
-@RequestMapping("/postagens")
+@RequestMapping("/postagem")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PostagemController {
 	
