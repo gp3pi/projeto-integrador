@@ -23,5 +23,6 @@ Membros: <br>
 
 ## Modelo Lógico: Modelo Relacional
 
-![Modelo relacional integrador](https://user-images.githubusercontent.com/92900668/186024384-27bfcd17-5f91-4a54-93cc-3feedf3bb882.png)
+![Diagrama Relacional Integrador](https://user-images.githubusercontent.com/92900668/186029813-5584528f-20a4-416b-8be8-797a6e59100c.png)
+
 
