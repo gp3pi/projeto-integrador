@@ -18,12 +18,8 @@ Membros: <br>
 
 ## Modelo Conceitual: Modelo Entidade-Relacionamento
 
-![Modelo entidade relacional integrador](https://user-images.githubusercontent.com/92900668/186024489-36a64fe4-b9b9-4b52-8b7a-ba659911697c.png)
-
+![Entidade Relacionamento](https://user-images.githubusercontent.com/92900668/186030281-6c741b7f-6ecf-44fa-a0bd-41863c13993d.png)
 
 ## Modelo Lógico: Modelo Relacional
 
 ![Modelo Relacional](https://user-images.githubusercontent.com/92900668/186030104-2e6cdc70-0ffb-4a90-93eb-c17e2d6f633a.png)
-
-
-
