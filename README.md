@@ -23,6 +23,7 @@ Membros: <br>
 
 ## Modelo Lógico: Modelo Relacional
 
-![image-removebg-preview](https://user-images.githubusercontent.com/92900668/186029961-5ed825ad-59da-4cdd-b1ba-fcae0100c199.png)
+![Modelo Relacional](https://user-images.githubusercontent.com/92900668/186030104-2e6cdc70-0ffb-4a90-93eb-c17e2d6f633a.png)
+
 
 
