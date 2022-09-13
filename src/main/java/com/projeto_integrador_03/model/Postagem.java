@@ -31,6 +31,9 @@ public class Postagem {
 	@Size(min = 10, max =255)
 	private String texto;
 	
+	@Size(max = 1000)
+	private String imagem;
+	
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
