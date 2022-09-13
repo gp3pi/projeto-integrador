@@ -33,7 +33,7 @@ public class Postagem {
 	
 	@Size(max = 1000)
 	private String imagem;
-	
+
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
@@ -67,6 +67,14 @@ public class Postagem {
 
 	public void setTexto(String texto) {
 		this.texto = texto;
+	}
+	
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
 	public LocalDateTime getData() {
