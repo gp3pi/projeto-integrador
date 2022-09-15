@@ -24,11 +24,11 @@ public class Postagem {
 	private Long id;
 	
 	@NotBlank(message = "Titulo é uma informação obrigatória.")
-	@Size(min = 3 , max = 255)
+	@Size(min = 3 , max = 50)
 	private String titulo;
 	
 	@NotBlank (message = "Texto é uma informação obrigatória.")
-	@Size(min = 10, max =255)
+	@Size(min = 10, max = 2000)
 	private String texto;
 	
 	@Size(max = 1000)
