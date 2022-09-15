@@ -37,6 +37,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 	@Size(min = 3, max =255)
 	private String descricao;
 	
+	@Size(max = 1000)
+	private String imagemTema;
+	
+	public String getImagemTema() {
+		return imagemTema;
+	}
+
+	public void setImagemTema(String imagemTema) {
+		this.imagemTema = imagemTema;
+	}
+
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
