@@ -1,6 +1,8 @@
 # Projeto Integrador Generation Brasil
 
-Utilizando Metodologia Ágil (SCRUM), o fluxo de desenvolvimento Git Flow, o framework Java Spring Boot e o sistema gerenciador banco de dados MySQL, criamos uma API completa para uma rede social integrada à divulgação de notícias. Seu intuito é colaborar com regiões geograficamente vulneráveis, tais como as que carecem de recursos básicos ou que se encontram em situação bélica, e esse suporte, por parte dos usuários, poderá ocorrer através de doações e compartilhamento de informações. Haverá a implementação do front-end do projeto no futuro, utilizando a biblioteca React.js.
+Utilizando Metodologia Ágil (SCRUM), o fluxo de desenvolvimento Git Flow, o framework Java Spring Boot e o sistema gerenciador banco de dados MySQL, criamos uma API completa para uma rede social integrada à divulgação de notícias. Seu intuito é colaborar com regiões geograficamente vulneráveis, tais como as que carecem de recursos básicos ou que se encontram em situação bélica, e esse suporte, por parte dos usuários, poderá ocorrer através de doações e compartilhamento de informações. 
+
+Frontend do projeto: https://github.com/gp3pi/projeto-integrador-frontend
 
 Membros: <br>
 <a href="https://github.com/JohnnHere"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">João Orlando</button></a>
